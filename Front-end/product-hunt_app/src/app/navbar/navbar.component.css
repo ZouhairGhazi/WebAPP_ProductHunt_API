@@ -1,0 +1,20 @@
+.spacer {
+  flex : 1 1 auto;
+}
+
+.home {
+  margin-left: 0.5em;
+  color: #DA552F;
+}
+
+.title {
+  color: #DA552F;
+  font-size: 75%;
+}
+
+.logo {
+  width: 25px;
+  height: auto;
+  margin-top: 50%;
+  margin-right: 7%;
+}

@@ -1,14 +1,28 @@
-<mat-form-field >
-  <mat-label>Choose a date</mat-label>
-  <div [formGroup]="pickedDateForm">
-    <input 
-      matInput 
-      formControlName="pickedDate"
-      [matDatepicker]="picker"
-      required
-    >
-  </div>
-  <mat-hint>MM/DD/YYYY</mat-hint>
-  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-datepicker #picker></mat-datepicker>
-</mat-form-field>
+<div class="container">
+  <mat-card class="main-card">
+    <mat-card-header>
+      <mat-card-title>Choose a date !</mat-card-title>
+    </mat-card-header>
+    <br>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Choose a date</mat-label>
+        <div [formGroup]="pickedDateForm">
+          <input 
+            matInput
+            [max]="maxDate"
+            formControlName="pickedDate"
+            [matDatepicker]="picker"
+            required
+          >
+        </div>
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="sendPickedDate()">Search</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
